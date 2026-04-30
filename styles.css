@@ -1,7 +1,72 @@
+@import url(./reset.css);
+
 :root {
+  --color-background: #ededed;
   --color-calculator-body: #ffffff;
   --color-button-1: #979797;
   --color-button-2: #d0d0d0;
   --color-button-3: #ff9f00;
   --color-screen: #5a5a5a;
+}
+* > * {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--color-background);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  width: 500px;
+  height: 700px;
+  padding: 40px;
+  border-radius: 64px;
+
+  background-color: var(--color-calculator-body);
+}
+
+.screen {
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-screen);
+  border: none;
+  border-radius: 32px;
+}
+
+.keypad {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  place-items: center;
+  gap: 10px;
+}
+
+button {
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  font: inherit;
+  font-size: xx-large;
+  font-weight: light;
+}
+
+.function {
+  background-color: var(--color-button-1);
+}
+
+.operator {
+  background-color: var(--color-button-3);
+}
+
+.number {
+  background-color: var(--color-button-2);
 }
