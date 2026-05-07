@@ -19,7 +19,7 @@ body {
   background-color: var(--color-background);
 }
 
-.container {
+.calculator {
   display: flex;
   flex-direction: column;
   gap: 40px;
@@ -32,7 +32,7 @@ body {
   background-color: var(--color-calculator-body);
 }
 
-.screen {
+.calculator__screen {
   width: 100%;
   height: 100%;
   background-color: var(--color-screen);
@@ -40,7 +40,7 @@ body {
   border-radius: 32px;
 }
 
-.keypad {
+.calculator__keypad {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
@@ -48,7 +48,7 @@ body {
   gap: 10px;
 }
 
-button {
+.keypad__button {
   border-radius: 50%;
   width: 80px;
   height: 80px;
@@ -57,14 +57,14 @@ button {
   font-weight: light;
 }
 
-.function {
+.keypad__button--function {
   background-color: var(--color-button-1);
 }
 
-.operator {
+.keypad__button--operator {
   background-color: var(--color-button-3);
 }
 
-.number {
+.keypad__button--number {
   background-color: var(--color-button-2);
 }
