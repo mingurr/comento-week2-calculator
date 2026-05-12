@@ -10,73 +10,155 @@
       src="https://kit.fontawesome.com/1a290abd05.js"
       crossorigin="anonymous"
     ></script>
+    <script defer src="./main.js"></script>
     <title>Calculator UI</title>
   </head>
   <body>
     <main>
       <form class="calculator">
-        <input class="calculator__screen" placeholder="" />
+        <div class="calculator__screen">
+          <input id="calculator__screen--operation" placeholder="" value="" />
+          <input id="calculator__screen--result" placeholder="0" value="" />
+        </div>
 
         <div class="calculator__keypad">
-          <button type="button" class="keypad__button keypad__button--function">
+          <button
+            type="button"
+            class="keypad__button keypad__button--function"
+            value="delete"
+          >
             <i class="fa-solid fa-delete-left"></i>
           </button>
-          <button type="button" class="keypad__button keypad__button--function">
+          <button
+            type="button"
+            class="keypad__button keypad__button--function"
+            value="c"
+          >
             <i class="fa-solid fa-c"></i>
           </button>
-          <button type="button" class="keypad__button keypad__button--function">
+          <button
+            type="button"
+            class="keypad__button keypad__button--function"
+            value="%"
+          >
             <i class="fa-solid fa-percent"></i>
           </button>
-          <button type="button" class="keypad__button keypad__button--operator">
+          <button
+            type="button"
+            class="keypad__button keypad__button--operator"
+            value="/"
+          >
             <i class="fa-solid fa-divide"></i>
           </button>
-          <button type="button" class="keypad__button keypad__button--number">
+          <button
+            type="button"
+            class="keypad__button keypad__button--number"
+            value="7"
+          >
             7
           </button>
-          <button type="button" class="keypad__button keypad__button--number">
+          <button
+            type="button"
+            class="keypad__button keypad__button--number"
+            value="8"
+          >
             8
           </button>
-          <button type="button" class="keypad__button keypad__button--number">
+          <button
+            type="button"
+            class="keypad__button keypad__button--number"
+            value="9"
+          >
             9
           </button>
-          <button type="button" class="keypad__button keypad__button--operator">
+          <button
+            type="button"
+            class="keypad__button keypad__button--operator"
+            value="*"
+          >
             <i class="fa-solid fa-xmark"></i>
           </button>
-          <button type="button" class="keypad__button keypad__button--number">
+          <button
+            type="button"
+            class="keypad__button keypad__button--number"
+            value="4"
+          >
             4
           </button>
-          <button type="button" class="keypad__button keypad__button--number">
+          <button
+            type="button"
+            class="keypad__button keypad__button--number"
+            value="5"
+          >
             5
           </button>
-          <button type="button" class="keypad__button keypad__button--number">
+          <button
+            type="button"
+            class="keypad__button keypad__button--number"
+            value="6"
+          >
             6
           </button>
-          <button type="button" class="keypad__button keypad__button--operator">
+          <button
+            type="button"
+            class="keypad__button keypad__button--operator"
+            value="-"
+          >
             <i class="fa-solid fa-minus"></i>
           </button>
-          <button type="button" class="keypad__button keypad__button--number">
+          <button
+            type="button"
+            class="keypad__button keypad__button--number"
+            value="1"
+          >
             1
           </button>
-          <button type="button" class="keypad__button keypad__button--number">
+          <button
+            type="button"
+            class="keypad__button keypad__button--number"
+            value="2"
+          >
             2
           </button>
-          <button type="button" class="keypad__button keypad__button--number">
+          <button
+            type="button"
+            class="keypad__button keypad__button--number"
+            value="3"
+          >
             3
           </button>
-          <button type="button" class="keypad__button keypad__button--operator">
+          <button
+            type="button"
+            class="keypad__button keypad__button--operator"
+            value="+"
+          >
             <i class="fa-solid fa-plus"></i>
           </button>
           <button
             type="button"
             class="keypad__button keypad__button--number"
+            value=""
+            disabled
           ></button>
-          <button type="button" class="keypad__button keypad__button--number">
+          <button
+            type="button"
+            class="keypad__button keypad__button--number"
+            value="0"
+          >
             0
           </button>
-          <button type="button" class="keypad__button keypad__button--number">
+          <button
+            type="button"
+            class="keypad__button keypad__button--number"
+            value="."
+          >
             .
           </button>
-          <button type="submit" class="keypad__button keypad__button--operator">
+          <button
+            type="button"
+            class="keypad__button keypad__button--operator"
+            value="="
+          >
             <i class="fa-solid fa-equals"></i>
           </button>
         </div>

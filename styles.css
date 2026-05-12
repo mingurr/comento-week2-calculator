@@ -22,7 +22,7 @@ body {
 .calculator {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  justify-content: space-between;
 
   width: 500px;
   height: 700px;
@@ -34,10 +34,25 @@ body {
 
 .calculator__screen {
   width: 100%;
-  height: 100%;
+
   background-color: var(--color-screen);
   border: none;
   border-radius: 32px;
+  padding: 30px;
+}
+
+#calculator__screen--result {
+  width: 100%;
+  font-size: 3rem;
+  color: white;
+  text-align: right;
+}
+
+#calculator__screen--operation {
+  width: 100%;
+  font-size: 1.75rem;
+  color: var(--color-button-function);
+  text-align: right;
 }
 
 .calculator__keypad {
