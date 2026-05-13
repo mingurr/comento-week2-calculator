@@ -84,16 +84,35 @@ const handleNumber = (value) => {
 };
 
 const handleOperator = (value) => {
+  const displayOperator = getDisplayValue(value);
+
+  if (!previousValue && !currentValue) {
+    alert("숫자를 먼저 입력해주세요.");
+    return;
+  }
+
+  if (isCalculated) {
+    previousValue = calculatorScreen.value;
+    currentValue = "";
+    selectedOperator = value;
+
+    calculatorScreen.value = previousValue + displayOperator;
+
+    isCalculated = false;
+    return;
+  }
   previousValue = currentValue;
   currentValue = "";
-  let displayOperator = getDisplayValue(value);
 
   calculatorScreen.value = previousValue + displayOperator;
   selectedOperator = value;
 };
 
 const handleCalculate = (value) => {
-  let displayOperator = getDisplayValue(value);
+  if (!previousValue || !currentValue || !selectedOperator) {
+    return;
+  }
+  const displayOperator = getDisplayValue(value);
   calculatorScreenFormula.value = `${previousValue}${displayOperator}${currentValue}`;
 
   let result = calculate();
